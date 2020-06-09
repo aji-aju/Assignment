@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtpActivity"
+    tools:layout_editor_absoluteX="36dp"
+    tools:layout_editor_absoluteY="47dp">
+
+    <EditText
+        android:id="@+id/editTextNumber_otp_otp1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:maxLength="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber_otp_otp2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextNumber_otp_otp2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:maxLength="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber_otp_otp3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber_otp_otp1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextNumber_otp_otp3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:maxLength="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber_otp_otp4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber_otp_otp2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextNumber_otp_otp4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:maxLength="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber_otp_otp3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/textView_otp_introVerification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/otp_introHeading"
+        android:textColor="#949494"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_otp_otp1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <TextView
+        android:id="@+id/textView_otp_intro"
+        android:layout_width="293dp"
+        android:layout_height="91dp"
+        android:text="@string/otp_intro"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_otp_otp1"
+        app:layout_constraintTop_toBottomOf="@+id/textView_otp_introVerification" />
+
+    <Button
+        android:id="@+id/button_otp_resend"
+        android:layout_width="147dp"
+        android:layout_height="53dp"
+        android:text="@string/otp_resendButtonText"
+        android:background="@drawable/button_border"
+        android:textColor="#156D00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_otp_otp1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_otp_otp1"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <Button
+        android:id="@+id/button_otp_submit"
+        android:layout_width="168dp"
+        android:layout_height="51dp"
+        android:background="#156D00"
+        android:text="@string/all_submit"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintStart_toEndOf="@+id/button_otp_resend"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_otp_otp3"
+        app:layout_constraintVertical_bias="0.185" />
+
+    <ImageView
+        android:id="@+id/image_otp_back"
+        android:layout_width="19dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_otp_introVerification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView_otp_introVerification"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484"
+        app:srcCompat="@drawable/btn_leftarrow"
+        android:contentDescription="@string/all_BackImageContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="splash_assignment">Assignment</string>
+    <string name="login_LoginToAccount">Log in to your account</string>
+    <string name="login_buttonLoginText">Log in</string>
+    <string name="all_emailAddressHint">Email Address</string>
+    <string name="all_passwordHint">Password</string>
+    <string name="login_textForRegistration">Don’t have an account? REGISTER</string>
+    <string name="registration_name">Full Name</string>
+    <string name="registration_welcome">Welcome,</string>
+    <string name="registration_basicDetailsIntroText">Please provide your basic details</string>
+    <string name="registration_TermsAndConditions">I agree to the Terms and Conditions</string>
+    <string name="registration_LinkToSignIn"><u>Sign in with a different account?</u></string>
+    <string name="all_submit">Submit</string>
+    <string name="all_BackImageContentDescription">Back</string>
+    <string name="otp_resendButtonText">Resend</string>
+    <string name="otp_intro">Enter the verification code send to your number via sms.</string>
+    <string name="otp_introHeading">OTP Verification</string>
+    <string name="welcome_welcome">Welcome</string>
+</resources>

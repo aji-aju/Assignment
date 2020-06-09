@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity">
+
+    <EditText
+        android:id="@+id/editText_registration_PersonName"
+        android:layout_width="270dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="@string/registration_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.414"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editText_registration_EmailAddress"
+        android:layout_width="270dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="@string/all_emailAddressHint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514"
+        android:importantForAutofill="no" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_registration_password"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/editText_registration_EmailAddress"
+        app:layout_constraintStart_toStartOf="@id/editText_registration_EmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/editText_registration_EmailAddress"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditText_registration_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/all_passwordHint"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="45dp" />
+
+    <TextView
+        android:id="@+id/text_registration_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registration_welcome"
+        android:textColor="#949494"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_registration"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.117" />
+
+    <TextView
+        android:id="@+id/text_registration_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registration_basicDetailsIntroText"
+        android:textColor="#949494"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_registration"
+        app:layout_constraintTop_toBottomOf="@id/text_registration_welcome" />
+
+    <ImageView
+        android:id="@+id/image_registration_back"
+        android:layout_width="22dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_registration"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/btn_leftarrow"
+        android:contentDescription="@string/all_BackImageContentDescription" />
+
+    <CheckBox
+        android:id="@+id/checkBox_registration_termsAndConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registration_TermsAndConditions"
+        android:textColor="#949494"
+        app:layout_constraintStart_toStartOf="@id/textInputLayout_registration_password"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout_registration_password" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout_registration"
+        android:layout_width="387dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/button_registration_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/button_border"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="@string/all_submit"
+            android:textColor="#156D00"
+            app:layout_behavior="com.google.android.material.transformation.FabTransformationSheetBehavior" />
+
+        <TextView
+            android:id="@+id/text_registration_signIn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center_horizontal"
+
+            android:padding="16dp"
+            android:text="@string/registration_LinkToSignIn"
+            android:textAllCaps="false"
+            android:textColor="#156D00"
+            android:textStyle="bold"
+            app:layout_anchor="@id/button_registration_submit"
+            app:layout_anchorGravity="top" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
